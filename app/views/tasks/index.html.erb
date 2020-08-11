@@ -9,6 +9,10 @@
         <i class="far fa-square"></i>
       <% end %>
       <%= link_to task.title, task_path(task)%>
+      <%= link_to delete_path(task), method: :delete, data: { confirm: 'You sure dude?' } do %>
+        <i class="fas fa-trash" style="color: grey"></i>
+      <% end %>
+
     </li>
   <% end %>
 </ul>
